@@ -7,6 +7,10 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.EditText
+import com.google.firebase.database.*
+import kotlinx.android.synthetic.main.fragment_homefragment.*
 
 
 /**
@@ -25,6 +29,10 @@ class HOMEfragment : Fragment() {
 
     private var mListener: OnFragmentInteractionListener? = null
 
+
+
+    lateinit var myRef: DatabaseReference
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         if (arguments != null) {
@@ -38,6 +46,38 @@ class HOMEfragment : Fragment() {
         // Inflate the layout for this fragment
         return inflater!!.inflate(R.layout.fragment_homefragment, container, false)
     }
+
+    override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val database = FirebaseDatabase.getInstance()
+        myRef = database.getReference("message")
+
+        myRef.addValueEventListener(object:ValueEventListener{
+            override fun onCancelled(p0: DatabaseError?) {
+
+            }
+
+            override fun onDataChange(dataSnapshot: DataSnapshot?) {
+                if(dataSnapshot != null){
+                    val message = dataSnapshot.getValue(String::class.java)
+                    textView.text = message
+                }
+
+//                dataSnapshot.let { d ->
+//
+//                }
+            }
+
+        })
+
+
+        button.setOnClickListener{
+            myRef.setValue(editText.text.toString())
+        }
+
+    }
+
 
     // TODO: Rename method, update argument and hook method into UI event
     fun onButtonPressed(uri: Uri) {
