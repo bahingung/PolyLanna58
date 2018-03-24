@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "437961322977",
+    "firebase_url": "https://polylanna61.firebaseio.com",
+    "project_id": "polylanna61",
+    "storage_bucket": "polylanna61.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:437961322977:android:7ef88efe34604375",
+        "android_client_info": {
+          "package_name": "th.ac.lannapoly.app_lannapoly"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "437961322977-68bc8fogjakreh8en0vaip4l03pt5m6u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "th.ac.lannapoly.app_lannapoly",
+            "certificate_hash": "6abf6d4bf5394153b67cb0cb96fc4da4480c4a2d"
+          }
+        },
+        {
+          "client_id": "437961322977-547lej9r3adae92ei4ct1ddl3hdbbd53.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOts5Kfap0XtaJzLCBV8hRk-3YsOnNHLg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "437961322977-547lej9r3adae92ei4ct1ddl3hdbbd53.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
